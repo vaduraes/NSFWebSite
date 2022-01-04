@@ -1,0 +1,15 @@
+<form method=post action="">
+<table>
+  {% for field in form %}
+    <tr>
+    <td>{{ field.name }}</td><td>{{ field }}</td>
+    <td>{{ field.label }}</td>
+    </tr>
+  {% endfor %}
+</table>
+<p><input type=submit value=Compute></form></p>
+
+{% if result != None %}
+<iframe id="serviceFrameSend" src="{{ result }}" width="1000" height="1000"  frameborder="0">
+{% endif %}
+</p>
